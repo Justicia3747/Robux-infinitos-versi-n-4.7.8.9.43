@@ -23,6 +23,22 @@
 </head>
 <body>
   <h1>¡Caiste!</h1>
-  <img src="https://media.tenor.com/UnFx-k_lSckAAAAC/kitty-cat.gif" alt="Gato riendo">
+  <img src="https://media.tenor.com/UnFx-k_lSckAAAAC/kitty-cat.gif" alt="Gato riendo" id="cat">
+
+  <!-- Sonido de risa (puedes cambiar el enlace si tienes otro audio) -->
+  <audio id="laugh" autoplay loop>
+    <source src="https://www.myinstants.com/media/sounds/trollolololololol.mp3" type="audio/mpeg">
+    Tu navegador no soporta audio.
+  </audio>
+
+  <script>
+    const voz = new SpeechSynthesisUtterance("¡Pendejo!");
+    voz.lang = "es-MX"; // Español mexicano
+
+    setInterval(() => {
+      speechSynthesis.speak(voz);
+      alert("¡Pendejo!");
+    }, 3000);
+  </script>
 </body>
 </html>
